@@ -49,7 +49,14 @@ namespace DataBinding
             dataGridViewDrivers.DataSource = bindingSourceDrivers;
             textBoxName.DataBindings.Add(nameBinding);
             textBoxWins.DataBindings.Add(winsBinding);
-            labelCount.Text = $"{BindingContext[bindingSourceDrivers].Position + 1}/{BindingContext[bindingSourceDrivers].Count}";
+            bindingSourceDrivers.ListChanged += UpdateLabelInfo;
+            bindingSourceDrivers.PositionChanged += UpdateLabelInfo;
+            labelInfo.Text = $"{BindingContext[bindingSourceDrivers].Position + 1}/{BindingContext[bindingSourceDrivers].Count}";
+        }
+
+        private void UpdateLabelInfo(object sender, EventArgs e)
+        {
+            labelInfo.Text = $"{BindingContext[bindingSourceDrivers].Position + 1}/{BindingContext[bindingSourceDrivers].Count}";
         }
 
         private void ButtonAddWin_Click(object sender, EventArgs e)
@@ -67,7 +74,6 @@ namespace DataBinding
             if (bindingManager.Position > 0)
             {
                 bindingManager.Position--;
-                labelCount.Text = $"{bindingManager.Position + 1}/{bindingManager.Count}";
             }
         }
 
@@ -78,7 +84,6 @@ namespace DataBinding
             if (bindingManager.Position < bindingManager.Count - 1)
             {
                 bindingManager.Position++;
-                labelCount.Text = $"{bindingManager.Position + 1}/{bindingManager.Count}";
             }
         }
 
@@ -87,7 +92,6 @@ namespace DataBinding
             BindingManagerBase bindingManager = BindingContext[bindingSourceDrivers];
 
             bindingManager.Position = 0;
-            labelCount.Text = $"{bindingManager.Position + 1}/{bindingManager.Count}";
         }
 
         private void buttonMoveLast_Click(object sender, EventArgs e)
@@ -95,7 +99,6 @@ namespace DataBinding
             BindingManagerBase bindingManager = BindingContext[bindingSourceDrivers];
 
             bindingManager.Position = bindingManager.Count - 1;
-            labelCount.Text = $"{bindingManager.Position + 1}/{bindingManager.Count}";
         }
 
         private void buttonAddDriver_Click(object sender, EventArgs e)
@@ -103,7 +106,6 @@ namespace DataBinding
             BindingManagerBase bindingManager = BindingContext[bindingSourceDrivers];
 
             bindingSourceDrivers.Add(new RaceCarDriver { Name = "new name", Wins = 100 } );
-            labelCount.Text = $"{bindingManager.Position + 1}/{bindingManager.Count}";
         }
 
         private void buttonDeleteDriver_Click(object sender, EventArgs e)
@@ -113,7 +115,6 @@ namespace DataBinding
                 BindingManagerBase bindingManager = BindingContext[bindingSourceDrivers];
 
                 bindingSourceDrivers.RemoveAt(BindingContext[bindingSourceDrivers].Position);
-                labelCount.Text = $"{bindingManager.Position + 1}/{bindingManager.Count}";
             }
         }
 

@@ -46,7 +46,7 @@
             this.buttonMovePrev = new System.Windows.Forms.Button();
             this.buttonMoveNext = new System.Windows.Forms.Button();
             this.buttonMoveLast = new System.Windows.Forms.Button();
-            this.labelCount = new System.Windows.Forms.Label();
+            this.labelInfo = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewDrivers = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -238,7 +238,7 @@
             this.tableLayoutPanel3.Controls.Add(this.buttonMovePrev, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonMoveNext, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonMoveLast, 4, 0);
-            this.tableLayoutPanel3.Controls.Add(this.labelCount, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelInfo, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -291,16 +291,16 @@
             this.buttonMoveLast.UseVisualStyleBackColor = true;
             this.buttonMoveLast.Click += new System.EventHandler(this.buttonMoveLast_Click);
             // 
-            // labelCount
+            // labelInfo
             // 
-            this.labelCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelCount.AutoSize = true;
-            this.labelCount.Location = new System.Drawing.Point(235, 71);
-            this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(110, 13);
-            this.labelCount.TabIndex = 4;
-            this.labelCount.Text = "label3";
-            this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelInfo.AutoSize = true;
+            this.labelInfo.Location = new System.Drawing.Point(235, 71);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(110, 13);
+            this.labelInfo.TabIndex = 4;
+            this.labelInfo.Text = "label3";
+            this.labelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox3
             // 
@@ -369,7 +369,7 @@
         private System.Windows.Forms.Button buttonMovePrev;
         private System.Windows.Forms.Button buttonMoveNext;
         private System.Windows.Forms.Button buttonMoveLast;
-        private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Label labelInfo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
