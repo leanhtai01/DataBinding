@@ -12,7 +12,7 @@ namespace DataBinding
 {
     public partial class FormRaceCarDriver : Form
     {
-        BindingList<RaceCarDriver> drivers = new BindingList<RaceCarDriver>
+        List<RaceCarDriver> drivers = new List<RaceCarDriver>
         {
             new RaceCarDriver
             {
