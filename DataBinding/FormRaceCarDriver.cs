@@ -116,5 +116,13 @@ namespace DataBinding
                 labelCount.Text = $"{bindingManager.Position + 1}/{bindingManager.Count}";
             }
         }
+
+        private void TextBoxWins_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

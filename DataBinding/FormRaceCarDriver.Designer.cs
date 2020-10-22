@@ -164,6 +164,7 @@
             this.textBoxWins.Name = "textBoxWins";
             this.textBoxWins.Size = new System.Drawing.Size(349, 20);
             this.textBoxWins.TabIndex = 3;
+            this.textBoxWins.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxWins_KeyPress);
             // 
             // tableLayoutPanel4
             // 
