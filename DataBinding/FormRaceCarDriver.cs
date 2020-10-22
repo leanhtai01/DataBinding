@@ -30,14 +30,16 @@ namespace DataBinding
 
         private void LoadDriver()
         {
-            textBoxName.Text = driver.Name;
-            textBoxWins.Text = driver.Wins.ToString();
+            Binding nameBinding = new Binding("Text", driver, "Name");
+            Binding winsBinding = new Binding("Text", driver, "Wins");
+
+            textBoxName.DataBindings.Add(nameBinding);
+            textBoxWins.DataBindings.Add(winsBinding);
         }
 
         private void ButtonAddWin_Click(object sender, EventArgs e)
         {
             driver.Wins++;
-            textBoxWins.Text = driver.Wins.ToString();
         }
     }
 }
