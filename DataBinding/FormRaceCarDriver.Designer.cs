@@ -48,7 +48,7 @@
             this.buttonMoveLast = new System.Windows.Forms.Button();
             this.labelCount = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDrivers = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,7 +60,7 @@
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrivers)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -191,6 +191,7 @@
             this.buttonAddDriver.TabIndex = 7;
             this.buttonAddDriver.Text = "Add Driver";
             this.buttonAddDriver.UseVisualStyleBackColor = true;
+            this.buttonAddDriver.Click += new System.EventHandler(this.buttonAddDriver_Click);
             // 
             // buttonAddWin
             // 
@@ -212,6 +213,7 @@
             this.buttonDeleteDriver.TabIndex = 6;
             this.buttonDeleteDriver.Text = "Delete Driver";
             this.buttonDeleteDriver.UseVisualStyleBackColor = true;
+            this.buttonDeleteDriver.Click += new System.EventHandler(this.buttonDeleteDriver_Click);
             // 
             // groupBox2
             // 
@@ -253,6 +255,7 @@
             this.buttonMoveFirst.TabIndex = 0;
             this.buttonMoveFirst.Text = "<<";
             this.buttonMoveFirst.UseVisualStyleBackColor = true;
+            this.buttonMoveFirst.Click += new System.EventHandler(this.buttonMoveFirst_Click);
             // 
             // buttonMovePrev
             // 
@@ -263,6 +266,7 @@
             this.buttonMovePrev.TabIndex = 1;
             this.buttonMovePrev.Text = "<";
             this.buttonMovePrev.UseVisualStyleBackColor = true;
+            this.buttonMovePrev.Click += new System.EventHandler(this.buttonMovePrev_Click);
             // 
             // buttonMoveNext
             // 
@@ -273,6 +277,7 @@
             this.buttonMoveNext.TabIndex = 2;
             this.buttonMoveNext.Text = ">";
             this.buttonMoveNext.UseVisualStyleBackColor = true;
+            this.buttonMoveNext.Click += new System.EventHandler(this.buttonMoveNext_Click);
             // 
             // buttonMoveLast
             // 
@@ -283,6 +288,7 @@
             this.buttonMoveLast.TabIndex = 3;
             this.buttonMoveLast.Text = ">>";
             this.buttonMoveLast.UseVisualStyleBackColor = true;
+            this.buttonMoveLast.Click += new System.EventHandler(this.buttonMoveLast_Click);
             // 
             // labelCount
             // 
@@ -297,7 +303,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dataGridViewDrivers);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
@@ -306,19 +312,20 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Drivers list";
             // 
-            // dataGridView1
+            // dataGridViewDrivers
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1070, 409);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewDrivers.AllowUserToAddRows = false;
+            this.dataGridViewDrivers.AllowUserToResizeColumns = false;
+            this.dataGridViewDrivers.AllowUserToResizeRows = false;
+            this.dataGridViewDrivers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDrivers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewDrivers.Location = new System.Drawing.Point(3, 16);
+            this.dataGridViewDrivers.MultiSelect = false;
+            this.dataGridViewDrivers.Name = "dataGridViewDrivers";
+            this.dataGridViewDrivers.RowHeadersVisible = false;
+            this.dataGridViewDrivers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewDrivers.Size = new System.Drawing.Size(1070, 409);
+            this.dataGridViewDrivers.TabIndex = 0;
             // 
             // FormRaceCarDriver
             // 
@@ -342,7 +349,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrivers)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,7 +372,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewDrivers;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button buttonAddDriver;
         private System.Windows.Forms.Button buttonAddWin;
